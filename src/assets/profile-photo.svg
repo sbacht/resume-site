@@ -1,0 +1,13 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="100" fill="#f1f5f9"/>
+  
+  <!-- Profile icon -->
+  <circle cx="100" cy="80" r="30" fill="#64748b"/>
+  <path d="M100 120 C 70 120 45 145 45 175 L 155 175 C 155 145 130 120 100 120 Z" fill="#64748b"/>
+  
+  <!-- Add text for easy replacement -->
+  <text x="100" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#64748b">
+    Replace with your photo
+  </text>
+</svg>
