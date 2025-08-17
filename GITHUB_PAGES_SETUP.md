@@ -13,13 +13,13 @@ Your resume site is now configured for GitHub Pages hosting! Here's how to deplo
 ## 🎯 Your Site URL
 
 Once deployed, your resume will be available at:
-**`https://sbacht.github.io/Resume/`**
+**`https://sbacht.github.io/Resume-site/`**
 
 ## 📋 Setup Steps
 
 ### **1. Enable GitHub Pages**
 
-1. Go to your repository: `https://github.com/sbacht/Resume`
+1. Go to your repository: `https://github.com/sbacht/Resume-site`
 2. Click **Settings** tab
 3. Scroll down to **Pages** section
 4. Under **Source**, select **GitHub Actions**

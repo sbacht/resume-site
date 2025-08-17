@@ -2,6 +2,12 @@
 
 Your resume now includes live GitHub data integration! This automatically pulls and displays your latest GitHub activity, making your resume always up-to-date.
 
+## 🎯 **Repository Information**
+
+- **Repository Name**: `Resume-site` (with hyphen)
+- **GitHub Pages URL**: `https://sbacht.github.io/Resume-site/`
+- **Repository URL**: `https://github.com/sbacht/Resume-site`
+
 ## ✨ What's Included
 
 ### 🚀 Live GitHub Data

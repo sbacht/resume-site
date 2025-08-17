@@ -34,6 +34,12 @@ A beautiful, single-file React resume page built with Tailwind CSS, shadcn/ui co
    npm install
    ```
 
+### Repository Information
+
+- **Repository Name**: `Resume-site` (with hyphen)
+- **GitHub Pages URL**: `https://sbacht.github.io/Resume-site/`
+- **Repository URL**: `https://github.com/sbacht/Resume-site`
+
 2. **Start development server:**
    ```bash
    npm run dev
