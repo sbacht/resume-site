@@ -2,7 +2,7 @@ import { useMemo } from "react";
 import { Card, CardContent } from "./components/ui/card";
 import { Button } from "./components/ui/button";
 import { Badge } from "./components/ui/badge";
-import { Github, Linkedin, Mail, MapPin, ExternalLink, Award, GraduationCap } from "lucide-react";
+import { Github, Linkedin, Mail, MapPin, ExternalLink, Award, GraduationCap, Download } from "lucide-react";
 import { motion } from "framer-motion";
 import profilePhoto from "./assets/profile-photo.png";
 import GitHubStats from "./components/GitHubStats";
@@ -27,6 +27,8 @@ const DATA = {
     "Built CI/CD pipelines on Azure DevOps to cut deployment time and improve quality",
     "Skilled in containerization (Docker, Kubernetes) and cloud IaC (Terraform, AWS, GCP)",
     "Mentored teams, drove best practices, and delivered complex enterprise-grade solutions",
+    "Passionate about MLOps, automation, and deploying machine learning models at scale",
+    "Currently building personal MLOps projects to deepen practical skills in model deployment and monitoring",
   ],
   skills: {
     core: [
@@ -237,30 +239,40 @@ export default function ResumeSite() {
               <p className="mt-6 max-w-3xl text-slate-700 leading-relaxed">{DATA.summary}</p>
             </div>
           </div>
-          {hasLinks && (
-            <div className="mt-6 flex flex-wrap gap-3">
-              {DATA.contacts.email && (
-                <Button asChild variant="secondary" className="rounded-2xl">
-                  <a href={`mailto:${DATA.contacts.email}`}><Mail className="h-4 w-4 mr-2"/>Email</a>
-                </Button>
-              )}
-              {DATA.contacts.linkedin && (
-                <Button asChild variant="outline" className="rounded-2xl">
-                  <a href={DATA.contacts.linkedin} target="_blank" rel="noreferrer"><Linkedin className="h-4 w-4 mr-2"/>LinkedIn</a>
-                </Button>
-              )}
-              {DATA.contacts.github && (
-                <Button asChild variant="outline" className="rounded-2xl">
-                  <a href={DATA.contacts.github} target="_blank" rel="noreferrer"><Github className="h-4 w-4 mr-2"/>GitHub</a>
-                </Button>
-              )}
-              {DATA.contacts.website && (
-                <Button asChild className="rounded-2xl">
-                  <a href={DATA.contacts.website} target="_blank" rel="noreferrer">Personal Site<ExternalLink className="h-4 w-4 ml-2"/></a>
-                </Button>
-              )}
-            </div>
-          )}
+          <div className="mt-6 flex flex-wrap gap-3">
+            {/* Download CV Button - Always visible */}
+            <Button asChild variant="default" className="rounded-2xl bg-blue-600 hover:bg-blue-700">
+              <a href="/Serge_Bacht_CV.pdf" download="Serge_Bacht_CV.pdf">
+                <Download className="h-4 w-4 mr-2"/>Download CV
+              </a>
+            </Button>
+            
+            {/* Contact buttons - only show if links exist */}
+            {hasLinks && (
+              <>
+                {DATA.contacts.email && (
+                  <Button asChild variant="secondary" className="rounded-2xl">
+                    <a href={`mailto:${DATA.contacts.email}`}><Mail className="h-4 w-4 mr-2"/>Email</a>
+                  </Button>
+                )}
+                {DATA.contacts.linkedin && (
+                  <Button asChild variant="outline" className="rounded-2xl">
+                    <a href={DATA.contacts.linkedin} target="_blank" rel="noreferrer"><Linkedin className="h-4 w-4 mr-2"/>LinkedIn</a>
+                  </Button>
+                )}
+                {DATA.contacts.github && (
+                  <Button asChild variant="outline" className="rounded-2xl">
+                    <a href={DATA.contacts.github} target="_blank" rel="noreferrer"><Github className="h-4 w-4 mr-2"/>GitHub</a>
+                  </Button>
+                )}
+                {DATA.contacts.website && (
+                  <Button asChild className="rounded-2xl">
+                    <a href={DATA.contacts.website} target="_blank" rel="noreferrer">Personal Site<ExternalLink className="h-4 w-4 ml-2"/></a>
+                  </Button>
+                )}
+              </>
+            )}
+          </div>
         </motion.div>
       </header>
 
